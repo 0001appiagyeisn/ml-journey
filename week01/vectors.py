@@ -20,6 +20,20 @@ def scale(c, v):
         result.append(c * x)
     return result
 
+def dot(v, w):
+
+    if len(v) != len(w):
+        print("Lengths differ!")
+        return None
+    total = 0
+    for i in range(len(v)):
+        total = total + v[i] * w[i]
+    return total
+qty = [1, -1]
+price = [1,1]
+
+
+print(dot(qty, price)) 
 print(add([-3,1], [1,2])) 
 print(scale(2, [2,14])) 
 print(length([3,4]))
