@@ -1,0 +1,19 @@
+line 1
+(a) Syntax error
+(b) missing syntax as in symbols (" or " or ( ) or : or , )
+missing "
+
+line 2 
+(a) Syntax error
+(b) missing syntax as in symbols (" or " or ( ) or : or , )
+same as line 1 missing :
+
+line 4
+(a) Nameerror
+(b) using a namebox that does not exist or a mispelling, calling such variable will show a nameerror type
+The variable used was Name and the one called was name...name doesnt exist
+
+line 5
+(a) Typeerror
+(b) mixing data types inappropriately like adding a str and int
+Ama a str was added to 19 and int
