@@ -1,6 +1,4 @@
 import math
-from unittest import result
-
 
 def add(v, w):
     
