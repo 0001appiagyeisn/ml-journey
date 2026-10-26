@@ -1,4 +1,5 @@
 import math
+from unittest import result
 
 
 def add(v, w):
@@ -31,6 +32,18 @@ def dot(v, w):
     return total
 qty = [1, -1]
 price = [1,1]
+
+def mat_vec(matrix, v):
+    result = []
+    for row in matrix:
+        result.append(dot(row, v))
+    return result
+    
+M = [[1, 2], [3, 4]]
+print(mat_vec(M, [1, 1]))
+
+baskets = [[2, 3, 1], [1, 0, 4]]
+print(mat_vec(baskets, [10, 6, 15]))
 
 
 print(dot(qty, price)) 
