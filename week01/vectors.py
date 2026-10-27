@@ -40,8 +40,9 @@ def mat_vec(matrix, v):
 M = [[1, 2], [3, 4]]
 print(mat_vec(M, [1, 1]))
 
-baskets = [[2, 3, 1], [1, 0, 4]]
-print(mat_vec(baskets, [10, 6, 15]))
+baskets = [[2, 1, 0], [1, 1, 1], [0, 3, 2], [4, 0, 1]]
+prices = [10, 6, 15]
+print(mat_vec(baskets, prices))
 
 
 print(dot(qty, price)) 
