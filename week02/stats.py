@@ -21,3 +21,21 @@ def data_range(data):
 
 print(f"Range: {data_range([31,33,30,32,34,29,31])}")
     
+def mode(data):
+    counts = {}
+    highest = data[0]
+    for num in data:
+        if num in counts:
+            counts[num] +=1
+            
+        else: 
+            counts[num] = 1
+    for num in counts:        
+        if counts[num] > counts[highest]:
+            highest = num
+    return highest
+
+sizes = [40, 42, 41, 42, 43, 42, 40, 44, 41, 42, 43, 41]
+print(mode(sizes)) 
+print(mode(["MTN", "AT", "MTN"])) 
+        
