@@ -1,7 +1,8 @@
+import math 
+
 def mean(data):
     return sum(data) / len(data) if data else 0
-
-print(f"Mean: {mean([1500, 1800, 2000, 2200, 9000])}") 
+ 
 
 def median(data):
     s = sorted(data)
@@ -12,14 +13,14 @@ def median(data):
     else:
         return (s[mid - 1] + s[mid]) / 2
 
-print(f"Median: {median([1500, 1800, 2000, 2200, 9000])}") 
+
 
 def data_range(data):
     maximum = max(data)
     minimum = min(data)
     return maximum - minimum
 
-print(f"Range: {data_range([31,33,30,32,34,29,31])}")
+
     
 def mode(data):
     counts = {}
@@ -35,7 +36,23 @@ def mode(data):
             highest = num
     return highest
 
-sizes = [40, 42, 41, 42, 43, 42, 40, 44, 41, 42, 43, 41]
-print(mode(sizes)) 
-print(mode(["MTN", "AT", "MTN"])) 
+
         
+
+def variance(data):
+    m = mean(data)
+    total = 0
+    for x in data:
+        total += (x - m) ** 2
+    return total / len(data)
+
+
+def std_dev(data):
+    m = mean(data)
+    total = 0
+    for x in data:
+        total += (x - m) ** 2
+    return math.sqrt(total / len(data))
+
+
+
