@@ -26,10 +26,10 @@ for i, order in enumerate(orders,1):
         counts[food] += qty
     else:
         counts[food] = qty
-
+for food in counts:
     if counts[food] > counts[most_order["food"]]:
-        most_order = order
+        most_order = food
 
 print(f"Total: Ghc {total}")
 
-print(f"Most ordered: {most_order['food']} ({counts[most_order['food']]})")
+print(f"Most ordered: {most_order} ({counts[most_order]})")
