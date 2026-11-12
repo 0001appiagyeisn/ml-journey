@@ -5,6 +5,17 @@ menu = {"jollof": 25, "waakye": 20," banku": 18, "kelewele": 10, "sobolo": 5}
 orders = []
 
 #Loop to take orders and quantity
+def get_int_between(prompt,low,high):
+    while True:
+        try:
+            value = int(input(prompt))
+            if low <= value <=high:
+                return value
+            else:
+                print(f"Between {low} and {high} please")
+        except ValueError:
+            print(f"Enter a whole number between {low} and {high} please")
+
 while True:
     order = input("Enter food: ").strip().lower()
     if order == "done":
@@ -12,7 +23,7 @@ while True:
     if order not in menu:
         print("Sorry order not in menu")
         continue
-    qty = int(input("Enter Quantity: "))
+    qty = get_int_between("Quantity: ",1,20)
     orders.append({"food":order, "Quantity":qty})
 
 #dict for orders and total quantity made
