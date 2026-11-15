@@ -1,6 +1,6 @@
 import random
 
-rolls = 1000000
+rolls = 1000
 sixes = 0
 doubles = 0
 for _ in range(rolls):
