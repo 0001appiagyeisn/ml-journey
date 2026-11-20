@@ -25,3 +25,13 @@ def add(a,b):
 Ama = [[12, 8, 5, 10], [15, 6, 7, 9], [10, 9, 4, 12]]
 Esi = [[8, 5, 6, 4], [9, 7, 3, 6], [11, 4, 5, 8]]
 print(add(Ama, Esi))
+
+def dot(v, w):
+
+    if len(v) != len(w):
+        print("Lengths differ!")
+        return None
+    total = 0
+    for i in range(len(v)):
+        total = total + v[i] * w[i]
+    return total
