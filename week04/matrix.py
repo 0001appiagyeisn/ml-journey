@@ -57,3 +57,11 @@ def transpose(m):
         trans.append(get_column(m,j))
     return trans
 print(transpose(sales))
+
+
+def row_totals(m):
+    c_totals = []
+    for i in range(len(m)):
+        c_totals.append(sum(m[i]))
+    return c_totals
+print("Food totals: ",row_totals(transpose(sales))) 
