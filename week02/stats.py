@@ -55,6 +55,13 @@ def std_dev(data):
     return math.sqrt(total / len(data))
 
 
-
+if __name__ == "__main__":
+    data = [1, 2, 3, 4, 5, 5]
+    print("Mean:", mean(data))
+    print("Median:", median(data))
+    print("Mode:", mode(data))
+    print("Range:", data_range(data))
+    print("Variance:", variance(data))
+    print("Standard Deviation:", std_dev(data))
 
 
