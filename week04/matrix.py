@@ -65,3 +65,28 @@ def row_totals(m):
         c_totals.append(sum(m[i]))
     return c_totals
 print("Food totals: ",row_totals(transpose(sales))) 
+
+def mat_mul(a,b):
+    if len(a[0]) != len(b):
+        print("lengths differ")
+        return None
+    result = []
+    for i in range(len(a)):
+        new_row = []
+        for j in range(len(b[0])):
+            new_row.append(dot(a[i],get_column(b,j)))
+        result.append(new_row)
+    return result
+
+
+sales = [[12, 8, 5, 10], [15, 6, 7, 9], [10, 9, 4, 12]]
+sell_cost = [[25, 15], [20, 11], [18, 10], [10,5]]
+print(mat_mul(sales, sell_cost))
+print(mat_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]]))
+
+A = [[1, 2], [3, 4]]
+B = [[0, 1], [1, 0]] 
+I = [[1, 0], [0, 1]]
+print(mat_mul(A, B))
+print(mat_mul(B, A))
+print(mat_mul(A, I))
