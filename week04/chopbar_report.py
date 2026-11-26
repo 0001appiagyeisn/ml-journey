@@ -21,13 +21,13 @@ print(f"Days    Takings     Costs    Profit")
 for i, rows in enumerate(money):
     print(f"{days[i]}      {rows[0]}         {rows[1]}       {(rows[0]-rows[1])}")
     week_profit.append((rows[0]-rows[1]))
-print(f"Week profit: GH₵ {sum(week_profit):.2f}")
+print(f"Week profit: GH₵ {sum(week_profit):,.2f}")
 
 for j in range(len(week_profit)):
     if week_profit[j] > week_profit[best]:
         best = j
 
-print(f"Best day: {days[best]} (GH₵ {week_profit[best]})")
+print(f"Best day: {days[best]} (GH₵ {week_profit[best]:,.2f})")
 
 trans = transpose(week)
 for i, plate in enumerate(trans):
